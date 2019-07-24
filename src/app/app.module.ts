@@ -10,6 +10,11 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { LoginController } from "./components/login/login.controller";
 
+//material design modules
+import {MatGridListModule} from '@angular/material/grid-list';
+import { OkcComponent } from './okc/okc.component';
+
+
 @NgModule({
   declarations: [AppComponent, LoginController],
   imports: [
@@ -17,7 +22,8 @@ import { LoginController } from "./components/login/login.controller";
     BrowserAnimationsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
