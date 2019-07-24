@@ -12,7 +12,7 @@ export const environment = {
     storageBucket: "polyteam-42dc8.appspot.com",
     messagingSenderId: "967336886503",
     appId: "1:967336886503:web:6165d7bc563cd2ec"
-  };
+  }
 };
 
 /*
