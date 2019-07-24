@@ -7,4 +7,5 @@ import { Component } from "@angular/core";
 })
 export class LoginController {
   name: string = "Aicha Miloudi";
+  town: string = "Montreal";
 }
