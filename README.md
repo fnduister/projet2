@@ -72,6 +72,10 @@ Vous devez coder dans une langue et une seule l'anglais
 
 N'utilisez jamais var. Utilisez let et const.
 
+Utiliser $ a la fin d'une observable variable: variable$.
+
+Creer un nouveau fichier pour chaque feature.
+
 N'utilisez jamais any, que ce soit implicitement ou explicitement.
 
 N'utilisez pas le mot-clé function, utilisez les fonctions anonymes: `() => {...}`.
