@@ -6,5 +6,5 @@ import { Component } from "@angular/core";
   styleUrls: ["./login.styl"]
 })
 export class LoginController {
-  nom: string = "aicha";
+  name: string = "fabrice";
 }
