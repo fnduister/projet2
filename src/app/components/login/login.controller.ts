@@ -7,6 +7,8 @@ import { Component } from "@angular/core";
 })
 export class LoginController {
   name: string = "Aicha Miloudi";
+
+  lastname: string = "";
   town: string = "Montreal";
   age: number = 21;
   OkcComponent;
