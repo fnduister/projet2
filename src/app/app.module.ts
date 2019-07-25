@@ -12,7 +12,6 @@ import { LoginController } from "./components/login/login.controller";
 
 //material design modules
 import {MatGridListModule} from '@angular/material/grid-list';
-import { OkcComponent } from './okc/okc.component';
 
 
 @NgModule({
