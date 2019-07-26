@@ -13,13 +13,17 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { LoginController } from "./components/login/login.controller";
+
+import { HeaderController } from "./shared/header/header.controller";
+import { FooterController } from "./shared/footer/footer.controller";
+
+import { MatToolbarModule, MatButtonModule } from "@angular/material";
 
 //material design modules
 import { MatGridListModule } from "@angular/material/grid-list";
 
 @NgModule({
-  declarations: [AppComponent, LoginController],
+  declarations: [AppComponent, HeaderController, FooterController],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
