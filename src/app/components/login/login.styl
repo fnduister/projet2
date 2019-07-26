@@ -1,0 +1,40 @@
+
+.background{
+    background-image: url('../../../assets/login-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    position relative;
+    }
+
+mat-card{
+    z-index: 100;
+}
+
+.overlay{
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    z-index: 10;position absolute;
+    top 0;
+    }
+
+.wrapper{
+    display: grid;
+    grid-auto-rows: minmax(400px,auto);
+    justify-items: end;
+    align-items: center;
+    padding: 2em;
+    }
+
+.form{
+   display: grid;
+   grid-template-columns: 1fr;
+    width: 300px;
+    height:400px
+   padding: 1em;
+    }
