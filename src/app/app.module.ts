@@ -1,11 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { MatFormFieldModule } from "@angular/material/form-field";
-import { MatInputModule } from "@angular/material/input";
-import { MatSelectModule } from "@angular/material/select";
-import { MatCardModule } from "@angular/material/card";
-import { MatButtonModule } from "@angular/material/button";
 
 import { environment } from "src/environments/environment";
 import { AngularFireModule } from "@angular/fire";
@@ -14,16 +9,33 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
+//custom controllers
 import { HeaderController } from "./shared/header/header.controller";
 import { FooterController } from "./shared/footer/footer.controller";
-
-import { MatToolbarModule, MatButtonModule } from "@angular/material";
+import { HomeController } from "./components/home/home.controller";
+import { DashboardController } from "./components/dashboard/dashboard.controller";
+import { LoginController } from "./components/login/login.controller";
 
 //material design modules
-import { MatGridListModule } from "@angular/material/grid-list";
+import {
+  MatToolbarModule,
+  MatButtonModule,
+  MatCardModule,
+  MatSelectModule,
+  MatInputModule,
+  MatGridListModule,
+  MatFormFieldModule
+} from "@angular/material";
 
 @NgModule({
-  declarations: [AppComponent, HeaderController, FooterController],
+  declarations: [
+    AppComponent,
+    HeaderController,
+    FooterController,
+    HomeController,
+    DashboardController,
+    LoginController
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -35,6 +47,7 @@ import { MatGridListModule } from "@angular/material/grid-list";
     MatInputModule,
     MatSelectModule,
     MatCardModule,
+    MatToolbarModule,
     MatButtonModule
   ],
   providers: [],

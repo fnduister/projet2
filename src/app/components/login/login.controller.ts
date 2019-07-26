@@ -11,5 +11,4 @@ export class LoginController {
   lastname: string = "";
   town: string = "Montreal";
   age: number = 21;
-  OkcComponent;
 }
