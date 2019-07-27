@@ -18,9 +18,10 @@ import { LoginController } from "./components/login/login.controller";
 
 //material design modules
 import { MatGridListModule } from "@angular/material/grid-list";
+import { SettingsComponent } from './components/settings/settings.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginController],
+  declarations: [AppComponent, LoginController, SettingsComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
