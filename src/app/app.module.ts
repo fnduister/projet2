@@ -15,6 +15,7 @@ import { FooterController } from "./shared/footer/footer.controller";
 import { HomeController } from "./components/home/home.controller";
 import { DashboardController } from "./components/dashboard/dashboard.controller";
 import { LoginController } from "./components/login/login.controller";
+import { PageNotFoundController } from './components/page-not-found/page-not-found.controller';
 
 //material design modules
 import {
@@ -34,7 +35,8 @@ import {
     FooterController,
     HomeController,
     DashboardController,
-    LoginController
+    LoginController,
+    PageNotFoundController
   ],
   imports: [
     BrowserModule,

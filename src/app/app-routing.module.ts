@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { LoginController } from "./components/login/login.controller";
 import { HomeController } from "./components/home/home.controller";
+import { PageNotFoundController } from './components/page-not-found/page-not-found.controller';
 import { DashboardController } from "./components/dashboard/dashboard.controller";
 
 const routes: Routes = [
@@ -10,11 +11,13 @@ const routes: Routes = [
     component: HomeController,
     children: [{ path: "", component: DashboardController }]
   },
-  { path: "login", component: LoginController }
+  { path: "login", component: LoginController },
+  { path: "not-found", component: PageNotFoundController},
+  { path: "**", redirectTo: "not-found"}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+exports: [RouterModule]
 })
 export class AppRoutingModule {}
