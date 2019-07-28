@@ -6,10 +6,5 @@ import { Component } from "@angular/core";
   styleUrls: ["./login.styl"]
 })
 export class LoginController {
-  name: string = "Aicha Miloudi";
-
-  lastname: string = "";
-  town: string = "Montreal";
-  age: number = 21;
-  OkcComponent;
+  items: string[] = ["uni1", "uni2"];
 }
