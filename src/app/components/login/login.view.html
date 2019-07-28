@@ -1,31 +1,59 @@
-
 <div class="background">
-  
-    <div class="wrapper">
-      <div class="form">
-        <mat-card>
-          <h1>Team Up</h1>
-          <p>a better way to form groups</p>
-          <form>
-            <mat-form-field>
-              <mat-label>University</mat-label>
-              <mat-select>
-                <mat-option> </mat-option>
-              </mat-select>
-            </mat-form-field>
-            <mat-form-field>
-              <input type="text" matInput placeholder="Username" />
-            </mat-form-field>
-            <mat-form-field>
-              <input type="text" matInput placeholder="Password" />
-            </mat-form-field>
-            <div>
-              <button mat-flat-button color="primary">Login</button>
-            </div>
-          </form>
-        </mat-card>
-      </div>
+  <div class="wrapper">
+    <div class="form">
+      <mat-card>
+        <h1 style="text-align: center;">Team Up</h1>
+        <h3 style="text-align: center;">a better way to form groups</h3>
+        <form>
+          <mat-form-field>
+            <mat-label>University</mat-label>
+            <mat-select ngModel name="university" required>
+              <mat-option *ngFor="let item of items" [value]="item">
+                {{ item }}
+              </mat-option>
+            </mat-select>
+            <mat-error>
+              Choose your university.
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              ngModel
+              name="username"
+              type="text"
+              matInput
+              placeholder="Username"
+              required
+            />
+            <mat-error>
+              A username is required.
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              ngModel
+              name="password"
+              type="password"
+              matInput
+              placeholder="Password"
+              required
+            />
+            <mat-error>
+              A password is required.
+            </mat-error>
+          </mat-form-field>
+          <div>
+            <button mat-flat-button color="primary" style="width: 100%">
+              Login
+            </button>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; ">
+            <mat-checkbox>Remeber me </mat-checkbox>
+            <p style="text-align: right; margin: 0">need help?</p>
+          </div>
+        </form>
+      </mat-card>
+    </div>
   </div>
-  <div class="overlay">
-  </div>
+  <div class="overlay"></div>
 </div>
