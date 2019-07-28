@@ -1,0 +1,9 @@
+$student-primary: mat-palette($mat-blue, 500, 900);
+$student-accent: mat-palette($mat-blue-gray, 500, 900);
+$student-warn: mat-palette($mat-deep-orange);
+
+$student-main-theme: mat-light-theme(
+  $student-primary,
+  $student-accent,
+  $student-warn
+);

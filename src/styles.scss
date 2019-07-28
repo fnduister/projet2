@@ -1,0 +1,26 @@
+@import "styles-variables";
+@import "./reset-styles.scss";
+
+@import "./themes/student-theme.scss";
+@import "./themes/teacher-theme.scss";
+
+@import "~@angular/material/theming";
+@import './app/components/dashboard/dashboard.theme.scss';
+@import './app/shared/header/header.theme.scss';
+
+@include mat-core();
+
+@mixin custom-components-theme($theme) {
+    @include dashboard-component-theme($theme);
+    @include header-component-theme($theme);
+}
+
+.student-main-theme {
+  @include angular-material-theme($student-main-theme);
+  @include custom-components-theme($student-main-theme);
+}
+
+.teacher-main-theme {
+  @include angular-material-theme($teacher-main-theme);
+  @include custom-components-theme($teacher-main-theme);
+}

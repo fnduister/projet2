@@ -1,0 +1,10 @@
+// Define an alternate teacher theme.
+$teacher-primary: mat-palette($mat-green,A200, 500);
+$teacher-accent: mat-palette($mat-blue-gray, 500, 900);
+$teacher-warn: mat-palette($mat-deep-orange);
+
+$teacher-main-theme: mat-light-theme(
+  $teacher-primary,
+  $teacher-accent,
+  $teacher-warn
+);
