@@ -15,7 +15,7 @@ const ThemesData = [{
   providedIn: "root"
 })
 export class ThemeService {
-  private themeProvider = new BehaviorSubject<string>("teacher-main-theme");
+  private themeProvider = new BehaviorSubject<string>("student-main-theme");
   currentTheme$: Observable<string> = this.themeProvider.asObservable();
 
   constructor() {}

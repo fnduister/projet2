@@ -25,6 +25,7 @@ import {
   MatButtonModule,
   MatCardModule,
   MatSelectModule,
+  MatCheckboxModule,
   MatInputModule,
   MatGridListModule,
   MatFormFieldModule
@@ -53,7 +54,8 @@ import {
     MatSelectModule,
     MatCardModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
