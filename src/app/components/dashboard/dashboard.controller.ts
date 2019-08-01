@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import { AuthService } from 'src/app/auth/auth.service';
+import { User } from './../../auth/auth.service';
 
 @Component({
   selector: "home-dashboard",
@@ -7,4 +9,13 @@ import { Component } from "@angular/core";
 })
 export class DashboardController {
     text: string = "in dashboard";
+    user: User;
+   
+
+    constructor(private auth: AuthService){}
+
+  login(){
+    this.auth.emailSingin();
+  }
+
 }

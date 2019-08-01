@@ -19,33 +19,39 @@ export interface User {
 
 @Injectable({ providedIn: "root" })
 export class AuthService {
+
   user$: Observable<User>;
+
   constructor(
     private afAuth: AngularFireAuth,
     private afs: AngularFirestore,
     private router: Router
   ) {
-    this.user$ = afAuth.authState.pipe(
-      switchMap(user => {
-        if (user) {
-          return this.afs.doc<User>("users/${user.id}");
-        } else {
-          return of(null);
-        }
-      })
-    );
+    // this.user$ = afAuth.authState.pipe(
+    //   switchMap(user => {
+    //     if (user) {
+    //       return this.afs.doc<User>("users/${user.id}");
+    //     } else {
+    //       return of(null);
+    //     }
+    //   })
+    // );
   }
+  
   //need to correct this
-  async EmailSingin() {
-    const provider = new auth.EmailAuthProvider();
+  async emailSingin() {
+    // const provider = new auth.EmailAuthProvider();
 
-    // const credential = await this.afAuth.auth.signInWithEmailAndPassword();
+    const credential = await this.afAuth.auth.signInWithEmailAndPassword('test@test.com', 'testme');
+    console.log({credential});
     // return this.updateUserData(credential.user);
   }
+
   async signOut() {
     await this.afAuth.auth.signOut();
     return this.router.navigate(["/login"]);
   }
+
   private updateUserData(user) {
     const userRef: AngularFirestoreDocument<User> = this.afs.doc<User>(
       "users/${user.id}"
