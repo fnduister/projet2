@@ -7,5 +7,7 @@
   </button>
 </mat-card>
 <mat-card>
-  <p ng-if="auth.user$ | async as user">{{ user.email }}</p>
+  <p ng-if="auth.user$ as user | async; else guest">{{ user | json }}</p>
+  <p #guest>je ne suis pas connecte</p>
 </mat-card>
+
