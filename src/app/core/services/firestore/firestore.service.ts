@@ -42,23 +42,23 @@ export class FirestoreService<T> implements OnInit {
     return this.groupsCollection.valueChanges();
   }
 
-  addElement = <T>(element: T, collection: AngularFirestor   eCollection<T>) : void => {
-    collection.add(element);
-  }  
+  // addElement = <T>(element: T, collection: AngularFirestor   eCollection<T>) : void => {
+  //   collection.add(element);
+  // }  
 
-  addElement = <T>(element: T, collection: AngularFirestoreCollection<T>) : void => {
-    this.currentCollection.add(element);
-  }
+  // addElement = <T>(element: T, collection: AngularFirestoreCollection<T>) : void => {
+  //   this.currentCollection.add(element);
+  // }
 
-  getCoursesWithIds = () : Observable<T[]> => {
-    return this.currentCollection.snapshotChanges().pipe(
-      map(actions => actions.map(a => {
-        const data: T = a.payload.doc.data();
-        const id: string = a.payload.doc.id;
-        return { id, ...data };
-      }))
-    );
-  }
+  // getCoursesWithIds = () : Observable<T[]> => {
+  //   return this.currentCollection.snapshotChanges().pipe(
+  //     map(actions => actions.map(a => {
+  //       const data: T = a.payload.doc.data();
+  //       const id: string = a.payload.doc.id;
+  //       return { id, ...data };
+  //     }))
+  //   );
+  // }
 
   
 }

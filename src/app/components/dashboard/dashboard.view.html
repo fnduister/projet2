@@ -1,6 +1,5 @@
 <mat-card *ngFor="let course of courses$ | async">
-
-      {{ course.title }}
-      {{ course.id }}
-  
+  {{ course.title }}
+  {{ course.id }}
 </mat-card>
+<button mat-button (click)="addThisElement()">ajoute element</button>
