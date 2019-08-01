@@ -13,7 +13,6 @@ import { switchMap } from "rxjs/operators";
 export interface User {
   uid: string;
   email: string;
-  password: string;
   displayName: string;
   courses: string[];
   role: string;
@@ -52,17 +51,12 @@ export class AuthService implements OnInit {
       "testme"
     );
 
-    console.log({ user: this.user$ });
-    console.log({ credential });
-
-    // this.user$ = this.afs.doc<User>("users/${user.uid}").valueChanges();
-
-    // return this.updateUserData(credential.user);
+    return this.updateUserData(credential.user);
   }
 
   async signOut() {
     await this.afAuth.auth.signOut();
-    return this.router.navigate(["/login"]);
+    // return this.router.navigate(["/login"]);
   }
 
   private updateUserData(user) {
@@ -73,11 +67,11 @@ export class AuthService implements OnInit {
     const data = {
       uid: user.uid,
       email: user.email,
-      password: user.password,
       displayName: user.displayName,
-      courses: user.courses,
-      role: user.role
+      courses: ["user.courses"],
+      role: "student"
     };
+    
     return userRef.set(data, { merge: true });
   }
 }
