@@ -1,5 +1,6 @@
 <mat-card>
-        <button mat-raised-button color="primary" (click)="login()">
-          login
-        </button>
-      </mat-card>
+  <button mat-raised-button color="primary" (click)="login()">
+    login
+  </button>
+  <p ng-if="auth.user$ | async">{{ auth.user$ | async }}</p>
+</mat-card>

@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Injectable, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 
 import { auth } from "firebase/app";
@@ -15,35 +15,41 @@ export interface User {
   email: string;
   password: string;
   displayName: string;
+  courses: string[];
+  role: string;
 }
 
 @Injectable({ providedIn: "root" })
-export class AuthService {
-
+export class AuthService implements OnInit {
   user$: Observable<User>;
 
   constructor(
     private afAuth: AngularFireAuth,
     private afs: AngularFirestore,
     private router: Router
-  ) {
-    // this.user$ = afAuth.authState.pipe(
-    //   switchMap(user => {
-    //     if (user) {
-    //       return this.afs.doc<User>("users/${user.id}");
-    //     } else {
-    //       return of(null);
-    //     }
-    //   })
-    // );
-  }
-  
-  //need to correct this
-  async emailSingin() {
-    // const provider = new auth.EmailAuthProvider();
+  ) {}
 
-    const credential = await this.afAuth.auth.signInWithEmailAndPassword('test@test.com', 'testme');
-    console.log({credential});
+  ngOnInit() {
+    this.user$ = this.afAuth.authState.pipe(
+      switchMap(user => {
+        if (user) {
+          return this.afs.doc<User>("users/${user.uid}").valueChanges();
+        } else {
+          return of(null);
+        }
+      })
+    );
+  }
+
+  //need to correct this
+  async emailSignin() {
+    const { user } = await this.afAuth.auth.signInWithEmailAndPassword(
+      "test@test.com",
+      "testme"
+    );
+
+    this.user$ = this.afs.doc<User>("users/${user.uid}").valueChanges();
+
     // return this.updateUserData(credential.user);
   }
 
@@ -54,13 +60,16 @@ export class AuthService {
 
   private updateUserData(user) {
     const userRef: AngularFirestoreDocument<User> = this.afs.doc<User>(
-      "users/${user.id}"
+      "users/${user.uid}"
     );
+
     const data = {
       uid: user.uid,
       email: user.email,
       password: user.password,
-      displayName: user.displayName
+      displayName: user.displayName,
+      courses: user.courses,
+      role: user.role
     };
     return userRef.set(data, { merge: true });
   }
