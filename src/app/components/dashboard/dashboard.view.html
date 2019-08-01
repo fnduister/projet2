@@ -2,5 +2,10 @@
   <button mat-raised-button color="primary" (click)="login()">
     login
   </button>
-  <p ng-if="auth.user$ | async">{{ auth.user$ | async }}</p>
+  <button mat-raised-button color="secondary" (click)="logout()">
+    logout
+  </button>
+</mat-card>
+<mat-card>
+  <p ng-if="auth.user$ | async as user">{{ user.email }}</p>
 </mat-card>

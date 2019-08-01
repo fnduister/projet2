@@ -9,11 +9,14 @@ import { User } from './../../auth/auth.service';
 })
 export class DashboardController {
     text: string = "in dashboard";
-
+    user: User;
     constructor(private auth: AuthService){}
 
   login(){
     this.auth.emailSignin();
+  }
+  logout(){
+    this.auth.signOut();
   }
 
 }

@@ -48,9 +48,9 @@ export class AuthService implements OnInit {
       "testme"
     );
 
-    this.user$ = this.afs.doc<User>("users/${user.uid}").valueChanges();
+    // this.user$ = this.afs.doc<User>("users/${user.uid}").valueChanges();
 
-    // return this.updateUserData(credential.user);
+    // return this.updateUserData(user);
   }
 
   async signOut() {
