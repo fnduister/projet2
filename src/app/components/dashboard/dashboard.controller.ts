@@ -13,6 +13,7 @@ export class DashboardController {
 
   login(){
     this.auth.emailSignin();
+    console.log("loggin in");
   }
   logout(){
     this.auth.signOut();

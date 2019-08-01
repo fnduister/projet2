@@ -43,14 +43,19 @@ export class AuthService implements OnInit {
 
   //need to correct this
   async emailSignin() {
-    const { user } = await this.afAuth.auth.signInWithEmailAndPassword(
+    console.log("emailSignIn");
+    console.log({ user: this.user$ });
+
+    const credential = await this.afAuth.auth.signInWithEmailAndPassword(
       "test@test.com",
       "testme"
     );
 
-    // this.user$ = this.afs.doc<User>("users/${user.uid}").valueChanges();
+    console.log({ credential });
 
-    // return this.updateUserData(user);
+    this.user$ = this.afs.doc<User>("users/${user.uid}").valueChanges();
+
+    // return this.updateUserData(credential.user);
   }
 
   async signOut() {
