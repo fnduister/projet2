@@ -9,7 +9,10 @@ import { User } from './../../auth/auth.service';
 })
 export class DashboardController {
     text: string = "in dashboard";
-    constructor(private auth: AuthService){}
+    user: User;
+    constructor(private auth: AuthService){
+      auth.user$.subscribe(user => this.user = user);
+    }
 
   login(){
     this.auth.emailSignin();

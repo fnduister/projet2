@@ -27,9 +27,7 @@ export class AuthService implements OnInit {
     private afAuth: AngularFireAuth,
     private afs: AngularFirestore,
     private router: Router
-  ) {}
-
-  ngOnInit() {
+  ) {
     this.user$ = this.afAuth.authState.pipe(
       switchMap(user => {
         if (user) {
@@ -41,19 +39,23 @@ export class AuthService implements OnInit {
     );
   }
 
+  ngOnInit() {
+
+  }
+
   //need to correct this
   async emailSignin() {
     console.log("emailSignIn");
-    console.log({ user: this.user$ });
 
     const credential = await this.afAuth.auth.signInWithEmailAndPassword(
       "test@test.com",
       "testme"
     );
 
+    console.log({ user: this.user$ });
     console.log({ credential });
 
-    this.user$ = this.afs.doc<User>("users/${user.uid}").valueChanges();
+    // this.user$ = this.afs.doc<User>("users/${user.uid}").valueChanges();
 
     // return this.updateUserData(credential.user);
   }
