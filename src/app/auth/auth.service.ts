@@ -9,14 +9,7 @@ import {
 } from "@angular/fire/firestore";
 import { Observable, of } from "rxjs";
 import { switchMap } from "rxjs/operators";
-
-export interface User {
-  uid: string;
-  email: string;
-  displayName: string;
-  courses: string[];
-  role: string;
-}
+import { User } from "./user.model";
 
 @Injectable({ providedIn: "root" })
 export class AuthService implements OnInit {
@@ -38,9 +31,7 @@ export class AuthService implements OnInit {
     );
   }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   //need to correct this
   async emailSignin() {
@@ -71,7 +62,7 @@ export class AuthService implements OnInit {
       courses: ["user.courses"],
       role: "student"
     };
-    
+
     return userRef.set(data, { merge: true });
   }
 }
