@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { AuthService } from 'src/app/auth/auth.service';
-import { User } from './../../auth/auth.service';
+import { User } from './../../auth/user.model';
 
 @Component({
   selector: "home-dashboard",
