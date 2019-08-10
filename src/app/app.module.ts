@@ -5,8 +5,11 @@ import { FormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { environment } from "src/environments/environment";
+
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { AngularFireStorageModule } from "@angular/fire/storage";
+import { AngularFireAuthModule } from "@angular/fire/auth";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -17,7 +20,7 @@ import { FooterController } from "./shared/footer/footer.controller";
 import { HomeController } from "./components/home/home.controller";
 import { DashboardController } from "./components/dashboard/dashboard.controller";
 import { LoginController } from "./components/login/login.controller";
-import { PageNotFoundController } from './components/page-not-found/page-not-found.controller';
+import { PageNotFoundController } from "./components/page-not-found/page-not-found.controller";
 
 //material design modules
 import {
@@ -55,7 +58,9 @@ import {
     MatCardModule,
     MatToolbarModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
