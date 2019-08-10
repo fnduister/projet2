@@ -1,24 +1,14 @@
 <mat-card>
-        Main Theme:
-        <button mat-raised-button color="primary">
-          Primary
-        </button>
-        <button mat-raised-button color="accent">
-          Accent
-        </button>
-        <button mat-raised-button color="warn">
-          Warning
-        </button>
-      </mat-card>
-      <mat-card class="alternate-theme">
-        Alternate Theme:
-        <button mat-raised-button color="primary">
-          Primary
-        </button>
-        <button mat-raised-button color="accent">
-          Accent
-        </button>
-        <button mat-raised-button color="warn">
-          Warning
-        </button>
-      </mat-card>
+  <button mat-raised-button color="primary" (click)="login()">
+    login
+  </button>
+  <button mat-raised-button color="secondary" (click)="logout()">
+    logout
+  </button>
+</mat-card>
+<mat-card>
+  <div *ngIf="auth.user$ | async as user; else guest">{{ user.email }}</div>
+  <ng-template #guest>
+    <p>je ne suis pas connecte</p>
+  </ng-template>
+</mat-card>
