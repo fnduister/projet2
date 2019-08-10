@@ -34,12 +34,12 @@ export class AuthService implements OnInit {
   ngOnInit() {}
 
   //need to correct this
-  async emailSignin() {
+  async emailSignin({ email, password }) {
     console.log("emailSignIn");
 
     const credential = await this.afAuth.auth.signInWithEmailAndPassword(
-      "test@test.com",
-      "testme"
+      email,
+      password
     );
 
     return this.updateUserData(credential.user);

@@ -12,7 +12,7 @@ export class DashboardController {
   constructor(private auth: AuthService) {}
 
   login() {
-    this.auth.emailSignin();
+    this.auth.emailSignin({ email: "test@test.com", password: "testme" });
     console.log("loggin in");
   }
   logout() {
