@@ -1,10 +1,14 @@
 <mat-toolbar color="primary">
   <div>
-    <mat-icon>reorder</mat-icon>
-    <span>{{ title }}</span>
+    <mat-icon>menu</mat-icon>
+    <span id="title">{{ title }}</span>
   </div>
-  <div>
-    <mat-icon>search</mat-icon>
+  <div id="right-side">
+    <div id="largerSearch">
+      <input type="text" placeholder="Search..." />
+      <mat-icon>search</mat-icon>
+    </div>
+    <mat-icon id="smallerSearch">search</mat-icon>
     <mat-icon>account_box</mat-icon>
   </div>
 </mat-toolbar>

@@ -1,15 +1,80 @@
-@import '~@angular/material/theming';
+@import "~@angular/material/theming";
+// @import "../../../styles-variables";
 
 @mixin header-component-theme($theme) {
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
   $warn: map-get($theme, warn);
 
-  mat-toolbar{
+  mat-toolbar {
     justify-content: space-between;
+    align-items: center;
   }
 
-  .spacer {
-    flex: 1 1 auto;
+  mat-toolbar > div {
+    display: flex;
+    align-items: center;
   }
+
+  #smallerSearch{
+    margin-right: .4em;
+  }
+
+  #largerSearch {
+    display: none;
+  }
+
+  #title {
+    font-family: TahuRegular !important;
+    font-size: 32px;
+    margin-left: 0.7em;
+  }
+
+  mat-icon {
+    margin-right: 0.2em;
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+  }
+
+  @media screen and (min-width: $toolbar-breakpoint) {
+    #right-side {
+      
+      #largerSearch {
+        display: flex;
+        margin-right: 1em;
+        position: relative;
+        background-color:rgba(255, 255, 255, 0.15);
+        border-radius: 3px;
+        input {
+          color: black;
+          background: none;
+          display: flex;
+          height: 2em;
+          padding: 0 1em;
+          border: none;
+          font-size: 18px;
+        }
+        input::placeholder{
+          color: white;
+          margin-left: 1em;
+        }
+
+        mat-icon{
+          position: absolute;
+          right: 5px;
+          top: 5px;
+          color: white;
+          font-size: 25px;
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      #smallerSearch {
+        display: none;
+      }
+    }
+  }
+
 }
