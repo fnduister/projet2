@@ -12,6 +12,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
 //custom controllers
+import { BreadcrumbController } from "./shared/breadcrumb/breadcrumb.controller";
 import { HeaderController } from "./shared/header/header.controller";
 import { FooterController } from "./shared/footer/footer.controller";
 import { HomeController } from "./components/home/home.controller";
@@ -40,7 +41,8 @@ import {
     HomeController,
     DashboardController,
     LoginController,
-    PageNotFoundController
+    PageNotFoundController,
+    BreadcrumbController
   ],
   imports: [
     FormsModule,

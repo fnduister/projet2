@@ -9,14 +9,14 @@
 
 @import './app/components/dashboard/dashboard.theme.scss';
 @import './app/components/login/login.theme.scss';
-@import './app/shared/header/header.theme.scss';
+@import './app/components/home/home.scss';
+
 
 @include mat-core();
 
 @mixin custom-components-theme($theme) {
-    @include dashboard-component-theme($theme);
-    @include header-component-theme($theme);
-    @include login-component-theme($theme);
+  @include dashboard-component-theme($theme);
+  @include login-component-theme($theme);
 }
 
 .student-main-theme {

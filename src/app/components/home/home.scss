@@ -1,4 +1,15 @@
-.container{
-    display:flex;
-    width: 90vw;
-    margin: auto;}
+@import '~@angular/material/theming';
+
+@mixin dashboard-component-theme($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, warn);
+
+    .container {
+        display: flex;
+        width: 90vw;
+        margin: auto;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
