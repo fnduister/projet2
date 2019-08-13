@@ -1,24 +1,25 @@
-<!-- <mat-card>
-  Main Theme:
-  <button mat-raised-button color="primary">
-    Primary
-  </button>
-  <button mat-raised-button color="accent">
-    Accent
-  </button>
-  <button mat-raised-button color="warn">
-    Warning
-  </button>
-</mat-card>
-<mat-card class="alternate-theme">
-  Alternate Theme:
-  <button mat-raised-button color="primary">
-    Primary
-  </button>
-  <button mat-raised-button color="accent">
-    Accent
-  </button>
-  <button mat-raised-button color="warn">
-    Warning
-  </button>
-</mat-card> -->
+<div id="container">
+  <ng-container *ngFor="let course of courses">
+    <mat-card>
+      <span class="dots p{{ course.priority }}"></span>
+      <p class="mat-title">{{ course.title }}</p>
+      <div>
+        <span
+          ><p class="mat-body-1" color="secondary">
+            {{ course.tps }} Tps
+          </p></span
+        >
+        <span
+          ><p class="mat-body-1" color="secondary">
+            {{ course.tds }} Tds
+          </p></span
+        >
+        <span
+          ><p class="mat-body-1" color="secondary">
+            {{ course.friends }} friends
+          </p></span
+        >
+      </div>
+    </mat-card>
+  </ng-container>
+</div>
