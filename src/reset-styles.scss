@@ -1,6 +1,17 @@
-body{
+body {
     width: 100%;
     height: 100%;
     padding: 0;
     margin: 0;
+
+    .mat-small, .mat-caption {
+        font: 400 10px/20px Roboto, "Helvetica Neue", sans-serif;
+    }
+    
+    .mat-body p,
+    .mat-body-1 p,
+    .mat-typography p {
+        padding: 0;
+        margin: 0;
+    }
 }
