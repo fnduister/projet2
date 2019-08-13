@@ -3,14 +3,20 @@
 
 .container {
   display: flex;
-  width: 90vw;
+  width: 95vw;
   margin: auto;
   justify-content: center;
   flex-direction: column;
 }
 
-@media screen and (min-width: map-get($grid-breakpoints , sm)) {
+@media screen and (min-width: map-get($grid-breakpoints, sm)) {
   .container {
     width: 80vw;
+  }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, iphone5)) {
+  .container {
+    width: 90vw;
   }
 }
