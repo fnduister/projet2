@@ -11,12 +11,12 @@ export class DashboardController {
     text: string = "in dashboard";
     constructor(private auth: AuthService){}
 
-  login(){
-    this.auth.emailSignin();
-    console.log("loggin in");
-  }
-  logout(){
-    this.auth.signOut();
-  }
+  // login(){
+  //   this.auth.emailSignin({email:"test@test.com",password:"testme",university:"uni1"});
+  //   console.log("loggin in");
+  // }
+  // logout(){
+  //   this.auth.signOut();
+  // }
 
 }
