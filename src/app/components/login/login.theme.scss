@@ -9,4 +9,8 @@
   h3 {
     color: mat-color($primary);
   }
+
+  .login-errors {
+    color: mat-color($warn);
+  }
 }
