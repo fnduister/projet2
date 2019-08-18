@@ -50,7 +50,7 @@ export class AuthService implements OnInit {
 
   async signOut() {
     await this.afAuth.auth.signOut();
-    // return this.router.navigate(["/login"]);
+    return this.router.navigate(["/login"]);
   }
 
   private updateUserData(user) {
