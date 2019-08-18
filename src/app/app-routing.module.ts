@@ -5,6 +5,8 @@ import { HomeController } from "./components/home/home.controller";
 import { PageNotFoundController } from './components/page-not-found/page-not-found.controller';
 import { DashboardController } from "./components/dashboard/dashboard.controller";
 
+
+
 const routes: Routes = [
   {
     path: "",

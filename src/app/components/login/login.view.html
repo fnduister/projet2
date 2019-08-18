@@ -43,6 +43,9 @@
               A password is required.
             </mat-error>
           </mat-form-field>
+              <p *ngIf="errors">
+                {{ errors.message }}
+              </p>
           <div>
             <button mat-flat-button color="primary" style="width: 100%">
               Login
