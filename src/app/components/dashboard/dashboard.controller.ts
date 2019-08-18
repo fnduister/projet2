@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
-import { ɵHttpInterceptingHandler } from "@angular/common/http";
+import { AuthService } from "src/app/auth/auth.service";
+import { User } from "./../../auth/user.model";
 
 interface Course {
   title: string;
@@ -14,6 +15,20 @@ interface Course {
   styleUrls: ["./dashboard.scss"]
 })
 export class DashboardController {
+  text: string = "in dashboard";
+  constructor(private auth: AuthService) {}
+
+  login() {
+    this.auth.emailSignin({
+      email: "test@test.com",
+      password: "testme",
+      university: "uni1"
+    });
+    console.log("loggin in");
+  }
+  logout() {
+    this.auth.signOut();
+  }
   text: string = "in dashboard";
   courses: Course[] = [
     { title: "LOG2420", tps: 5, tds: 3,friends: 2, priority: 1 },

@@ -4,7 +4,7 @@
       <mat-card>
         <h1 id="title" style="text-align: center;">Team Up</h1>
         <h3 style="text-align: center;">A better way to form groups</h3>
-        <form>
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
           <mat-form-field>
             <mat-label>University</mat-label>
             <mat-select ngModel name="university" required>
@@ -19,14 +19,15 @@
           <mat-form-field>
             <input
               ngModel
-              name="username"
+              name="email"
               type="text"
               matInput
-              placeholder="Username"
+              placeholder="Email"
               required
+              email
             />
             <mat-error>
-              A username is required.
+              a valid email is required.
             </mat-error>
           </mat-form-field>
           <mat-form-field>
@@ -42,6 +43,9 @@
               A password is required.
             </mat-error>
           </mat-form-field>
+          <p class="login-errors" *ngIf="errors">
+            {{ errors.message }}
+          </p>
           <div>
             <button mat-flat-button color="primary" style="width: 100%">
               Login
