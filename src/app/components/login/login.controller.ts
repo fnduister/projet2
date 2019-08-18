@@ -12,6 +12,7 @@ import { CodeNode } from "source-list-map";
 export class LoginController {
   items: string[] = ["uni1", "uni2"];
   errors: { code: string; message: string };
+  message: string;
 
   onSubmit(form: NgForm) {
     console.log(form);
@@ -27,7 +28,14 @@ export class LoginController {
       this.router.navigate([""]);
     } catch (err) {
       this.errors = err;
-      console.log({error: this.errors.message});
+      console.log({ error: this.errors.message });
+      if (this.errors.code == "auth/invalid-email") {
+        this.message = "Enter a valid email";
+      } else if (this.errors.code == "auth/wrong-password") {
+        this.message = "The password is invalid";
+      } else if (this.errors.code == "auth/user-not-found") {
+        this.message = " Email doesn't correspond to an existing user";
+      }
     }
   }
   logout() {
