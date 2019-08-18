@@ -1,0 +1,62 @@
+@import '~@angular/material/theming';
+@import "../../../styles-variables";
+
+#container {
+  display: flex;
+  flex-direction: column;
+
+  mat-card {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto 1em;
+
+    &>div {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1.5em;
+      padding-top: 0.5em;
+      border-top-style: solid;
+      border-top-width: 1px;
+    }
+
+    &>p {
+      margin-top: .5em;
+      align-self: center;
+    }
+
+    .dots {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      display: inline-block;
+      align-self: flex-end;
+    }
+
+    .p1 {
+      background-color: red;
+    }
+
+    .p2 {
+      background-color: yellow;
+    }
+
+    .p3 {
+      background-color: orange;
+    }
+  }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, sm)) {
+  #container {
+    flex-flow: row wrap;
+    justify-content: flex-start;
+
+    mat-card {
+      max-width: 12em;
+      margin: 0 1em 1em 0;
+    }
+  }
+
+
+}

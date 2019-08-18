@@ -1,0 +1,22 @@
+<div id="container">
+  <div id="left-side">
+    <ng-container *ngFor="let path of paths; index as i; last as isLast">
+      <ng-container *ngIf="!isLast; else last">
+        <button mat-button color="primary">
+          {{ path }}
+        </button>
+        <span id="separator">-</span>
+      </ng-container>
+
+      <ng-template #last>
+        <p class="mat-body-1" >{{ path }}</p>
+      </ng-template>
+    </ng-container>
+  </div>
+  <div id="right-side">
+    <ng-container *ngFor="let lexique of lexiques; index as i">
+      <span id="dot{{ i }}" class="dots"></span>
+      <p class='mat-small'>{{ lexique }}</p>
+    </ng-container>
+  </div>
+</div>

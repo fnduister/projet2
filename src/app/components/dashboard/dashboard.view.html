@@ -1,14 +1,21 @@
-<mat-card>
-  <button mat-raised-button color="primary" (click)="login()">
-    login
-  </button>
-  <button mat-raised-button color="secondary" (click)="logout()">
-    logout
-  </button>
-</mat-card>
-<mat-card>
-  <div *ngIf="auth.user$ | async as user; else guest">{{ user.email }}</div>
-  <ng-template #guest>
-    <p>je ne suis pas connecte</p>
-  </ng-template>
-</mat-card>
+<div id="container">
+  <ng-container *ngFor="let course of courses">
+    <mat-card class="theme-border">
+      <span class="dots p{{ course.priority }}"></span>
+      <p class="mat-title">{{ course.title }}</p>
+      <div class="theme-separator">
+        <span
+          ><p class="mat-body-1 accent-color">{{ course.tps }} Tps</p></span
+        >
+        <span
+          ><p class="mat-body-1 accent-color">{{ course.tds }} Tds</p></span
+        >
+        <span
+          ><p class="mat-body-1 accent-color">
+            {{ course.friends }} friends
+          </p></span
+        >
+      </div>
+    </mat-card>
+  </ng-container>
+</div>

@@ -1,4 +1,20 @@
-<mat-toolbar color="primary" class="default-shadow">
-  <span>{{title}}</span>
-
+<mat-toolbar color="primary">
+  <div id="left-side">
+    <button mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span id="title">{{ title }}</span>
+  </div>
+  <div id="right-side">
+    <div id="largerSearch">
+      <input type="text" placeholder="Search..." />
+      <mat-icon>search</mat-icon>
+    </div>
+    <button id="smallerSearch" mat-icon-button>
+      <mat-icon>search</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>account_box</mat-icon>
+    </button>
+  </div>
 </mat-toolbar>
