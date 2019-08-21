@@ -1,0 +1,114 @@
+#container1 {
+  .header {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+
+  .rowEven {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    align-items: center;
+    background-color: blue;
+  }
+  .rowOdd {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+#container2 {
+  .header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+
+  .rowEven {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    background-color: blue;
+  }
+  .rowOdd {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+#container3 {
+  .header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+
+  .rowEven {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    background-color: blue;
+  }
+  .rowOdd {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+#container4 {
+  .header {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+
+  .rowEven {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    background-color: blue;
+  }
+  .rowOdd {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+#container5 {
+  .header {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+
+  .rowEven {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+    background-color: blue;
+  }
+  .rowOdd {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+}

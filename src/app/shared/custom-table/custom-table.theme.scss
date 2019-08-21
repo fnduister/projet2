@@ -1,0 +1,40 @@
+@import "~@angular/material/theming";
+
+@mixin custom-table-component-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+
+  #container {
+    .theme-border {
+      border: 1px rgba($color: mat-color($primary), $alpha: 0) solid;
+      transition: border-color 1s ease;
+
+      &:hover {
+        border: 1px rgba($color: mat-color($primary), $alpha: 0.7) solid;
+
+        .theme-separator {
+          border-top-color: rgba($color: mat-color($primary), $alpha: 0.7);
+        }
+      }
+    }
+
+    .theme-separator {
+      border-top-color: rgba($color: black, $alpha: 0.2);
+      transition: all 1s;
+    }
+
+    .primary-color {
+      color: mat-color($primary);
+    }
+
+    .accent-color {
+      color: mat-color($accent);
+    }
+
+    .warning-color {
+      color: mat-color($warn);
+    }
+
+  }
+}

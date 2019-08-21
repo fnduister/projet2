@@ -35,6 +35,7 @@ import {
   MatFormFieldModule,
   MatIconModule
 } from "@angular/material";
+import { CustomTableComponent } from './shared/custom-table/custom-table.controler';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import {
     DashboardController,
     LoginController,
     PageNotFoundController,
-    BreadcrumbController
+    BreadcrumbController,
+    CustomTableComponent
   ],
   imports: [
     FormsModule,

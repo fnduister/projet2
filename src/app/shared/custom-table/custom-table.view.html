@@ -1,0 +1,158 @@
+
+<mat-card *ngIf="table.numberOfColumns == 1" id="container1">
+    <div class="header">
+      <p *ngFor="let column of table.columns">{{ column }}</p>
+  
+      <p *ngIf="table.button == true">button</p>
+    </div>
+    <div *ngFor="let row of rows; let i = index">
+      <div *ngIf="i % 2 == 0; else odd" class="rowEven">
+        <p *ngFor="let column of row">
+          {{ column }}
+        </p>
+  
+        <button mat-flat-button color="primary" *ngIf="table.button == true">
+          join
+        </button>
+      </div>
+  
+      <ng-template #odd>
+        <div class="rowOdd">
+          <p *ngFor="let column of row">
+            {{ column }}
+          </p>
+  
+          <button mat-flat-button color="primary" *ngIf="table.button == true">
+            join
+          </button>
+        </div>
+      </ng-template>
+    </div>
+  </mat-card>
+  
+
+<mat-card *ngIf="table.numberOfColumns == 2" id="container2">
+    <div class="header">
+      <p *ngFor="let column of table.columns">{{ column }}</p>
+  
+      <p *ngIf="table.button == true">button</p>
+    </div>
+    <div *ngFor="let row of rows; let i = index">
+      <div *ngIf="i % 2 == 0; else odd" class="rowEven">
+        <p *ngFor="let column of row">
+          {{ column }}
+        </p>
+  
+        <button mat-flat-button color="primary" *ngIf="table.button == true">
+          join
+        </button>
+      </div>
+  
+      <ng-template #odd>
+        <div class="rowOdd">
+          <p *ngFor="let column of row">
+            {{ column }}
+          </p>
+  
+          <button mat-flat-button color="primary" *ngIf="table.button == true">
+            join
+          </button>
+        </div>
+      </ng-template>
+    </div>
+  </mat-card>
+  
+
+<mat-card *ngIf="table.numberOfColumns == 3" id="container3">
+    <div class="header">
+      <p *ngFor="let column of table.columns">{{ column }}</p>
+  
+      <p *ngIf="table.button == true">button</p>
+    </div>
+    <div *ngFor="let row of rows; let i = index">
+      <div *ngIf="i % 2 == 0; else odd" class="rowEven">
+        <p *ngFor="let column of row">
+          {{ column }}
+        </p>
+  
+        <button mat-flat-button color="primary" *ngIf="table.button == true">
+          join
+        </button>
+      </div>
+  
+      <ng-template #odd>
+        <div class="rowOdd">
+          <p *ngFor="let column of row">
+            {{ column }}
+          </p>
+  
+          <button mat-flat-button color="primary" *ngIf="table.button == true">
+            join
+          </button>
+        </div>
+      </ng-template>
+    </div>
+  </mat-card>
+  
+<mat-card *ngIf="table.numberOfColumns == 4" id="container4">
+    <div class="header">
+      <p *ngFor="let column of table.columns">{{ column }}</p>
+  
+      <p *ngIf="table.button == true">button</p>
+    </div>
+    <div *ngFor="let row of rows; let i = index">
+      <div *ngIf="i % 2 == 0; else odd" class="rowEven">
+        <p *ngFor="let column of row">
+          {{ column }}
+        </p>
+  
+        <button mat-flat-button color="primary" *ngIf="table.button == true">
+          join
+        </button>
+      </div>
+  
+      <ng-template #odd>
+        <div class="rowOdd">
+          <p *ngFor="let column of row">
+            {{ column }}
+          </p>
+  
+          <button mat-flat-button color="primary" *ngIf="table.button == true">
+            join
+          </button>
+        </div>
+      </ng-template>
+    </div>
+  </mat-card>
+  
+
+<mat-card *ngIf="table.numberOfColumns == 5" id="container5">
+  <div class="header">
+    <p *ngFor="let column of table.columns">{{ column }}</p>
+
+    <p *ngIf="table.button == true">button</p>
+  </div>
+  <div *ngFor="let row of rows; let i = index">
+    <div *ngIf="i % 2 == 0; else odd" class="rowEven">
+      <p *ngFor="let column of row">
+        {{ column }}
+      </p>
+
+      <button mat-flat-button color="primary" *ngIf="table.button == true">
+        join
+      </button>
+    </div>
+
+    <ng-template #odd>
+      <div class="rowOdd">
+        <p *ngFor="let column of row">
+          {{ column }}
+        </p>
+
+        <button mat-flat-button color="primary" *ngIf="table.button == true">
+          join
+        </button>
+      </div>
+    </ng-template>
+  </div>
+</mat-card>
