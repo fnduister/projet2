@@ -1,114 +1,50 @@
-#container1 {
+#container {
+  padding: 0;
   .header {
     display: grid;
+    padding: 0;
+
+    justify-items: center;
+    align-items: center;
+    text-align: center
+  }
+
+  .rowEven {
+    display: grid;
+
+    justify-items: center;
+    align-items: center;
+    text-align: center
+  }
+  .rowOdd {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-align: center
+  }
+  .grid-1 {
     grid-template-columns: repeat(1, 1fr);
-    justify-items: center;
-    align-items: center;
   }
-
-  .rowEven {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    justify-items: center;
-    align-items: center;
-    background-color: blue;
-  }
-  .rowOdd {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    justify-items: center;
-    align-items: center;
-  }
-}
-
-#container2 {
-  .header {
-    display: grid;
+  .grid-2 {
     grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    align-items: center;
   }
-
-  .rowEven {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    align-items: center;
-    background-color: blue;
-  }
-  .rowOdd {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    align-items: center;
-  }
-}
-
-#container3 {
-  .header {
-    display: grid;
+  .grid-3 {
     grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    align-items: center;
   }
-
-  .rowEven {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    align-items: center;
-    background-color: blue;
-  }
-  .rowOdd {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    align-items: center;
-  }
-}
-
-#container4 {
-  .header {
-    display: grid;
+  .grid-4 {
     grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    align-items: center;
   }
-
-  .rowEven {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    align-items: center;
-    background-color: blue;
-  }
-  .rowOdd {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    align-items: center;
-  }
-}
-
-#container5 {
-  .header {
-    display: grid;
+  .grid-5 {
     grid-template-columns: repeat(5, 1fr);
-    justify-items: center;
-    align-items: center;
   }
-
-  .rowEven {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    justify-items: center;
-    align-items: center;
-    background-color: blue;
+  img {
+    width: 15px;
+    height: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .rowOdd {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    justify-items: center;
-    align-items: center;
+  .imageColumn {
+    float: left;
   }
 }

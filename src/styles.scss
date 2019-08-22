@@ -7,16 +7,17 @@
 
 @import "~@angular/material/theming";
 
-@import './app/components/dashboard/dashboard.theme.scss';
-@import './app/components/login/login.theme.scss';
-@import './app/components/home/home.scss';
-
+@import "./app/components/dashboard/dashboard.theme.scss";
+@import "./app/components/login/login.theme.scss";
+@import "./app/components/home/home.scss";
+@import "./app/shared/custom-table/custom-table.theme.scss";
 
 @include mat-core();
 
 @mixin custom-components-theme($theme) {
   @include dashboard-component-theme($theme);
   @include login-component-theme($theme);
+  @include custom-table-component-theme($theme);
 }
 
 .student-main-theme {

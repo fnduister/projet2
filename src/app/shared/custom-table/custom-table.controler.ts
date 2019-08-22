@@ -6,20 +6,27 @@ import { Component, OnInit, Input } from "@angular/core";
   styleUrls: ["./custom-table.scss"]
 })
 export class CustomTableComponent implements OnInit {
-  @Input() table:{columns:string [], button:boolean, numberOfColumns:number, imagePosition:number} = {
-    columns: ["", "groupe number", "preferences", "friends", "missing member"],
+  @Input() table: {
+    header: string[];
+    button: boolean;
+    numberOfColumns: number;
+    imagePosition: number;
+    images: string[][];
+  } = {
+    header: ["", "groupe number", "preferences", "friends", "missing member"],
     button: false,
     numberOfColumns: 5,
-    imagePosition: 3
+    imagePosition: 3,
+    images:[ ["../../../assets/discord-icon.jpg","../../../assets/google-drive-icon.jpg"],["../../../assets/login-background.jpg"]]
   };
 
   @Input() rows: any[] = [
-    [">", "45", "photo", "2", "2"],
-    [">", "45", "photo", "2", "2"],
-    [">", "45", "photo", "2", "2"],
-    [">", "45", "photo", "2", "2"],
-    [">", "45", "photo", "2", "2"],
-    [">", "45", "photo", "2", "2"]
+    [">", "45", "photo", "2", "1"],
+    [">", "45", "photo", "2", "1"],
+    [">", "45", "photo", "2", "1"],
+    [">", "45", "photo", "2", "1"],
+    [">", "45", "photo", "2", "1"],
+    [">", "45", "photo", "2", "1"]
   ];
 
   constructor() {}
